@@ -1,0 +1,35 @@
+FORMAT: 1A
+HOST: http://organizations.apiblueprint.org/
+
+# OrganizationServiceML12
+
+OrganizationService is an API for managing your Service Cloud Organizations
+
+## Organizations Collection [/organization]
+
+
+### Create an Organization [POST]
+This is an action that will call the service of getting organization
+
++ Request (application/json)
+
+        {
+            "orgName": "The Hare of the Dog Public House",
+            "contactFirstName": "Chris",
+            "contactLastName": "O'Connor",
+            "contactEmail": "cc@hotd.ie",
+            "country": "IE"            
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /organization/2
+
+    + Body
+
+            {
+                "orgId": "123",
+                "status": "New Org Created"
+            }
